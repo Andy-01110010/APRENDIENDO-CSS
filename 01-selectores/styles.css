@@ -1,0 +1,193 @@
+
+/* SELECTORES */
+/* Que es un selector?  */
+/* Dentro del html tenemos diferentes elmenots tenemos h1 y etiquetas, tengo elementos a los cuales les ponemos un id o una clase entonce podemos seleccionar elementos en base a sus etiquetas en base a sus atributos, en base a su id, o su clase */
+
+
+/* Selector Universal */
+/* El selector universal es el * (asterusco) con el asterisco se crean estilos generales porque se le agregan estilos a todos los documentos por ejemplo siquiero ponerle una fuente a todo el documento lo siguiente que podemos hacer es usar el asterisco y luego seleccionamos la familai de fuente que queremos aplicar tambien se puede utilizar para usar unos margenes o paddings porque html viene con estilos por default*/
+
+
+*{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+
+/* HTML DEfault Stiles */
+/* Cuales son los estilos por default de HTML */
+/* Fuente: https://www.w3schools.com/cssref/css_default_values.asp */
+
+
+
+/* Selector de eqiqueta  */
+/* Un selector de eqiqueta me va a permitir seleccionar elementos con una etiqueta concreta, yo pueso seleccionar por ejemplo todos los h1, o todos los parrafos */
+
+
+/* El padding nos permite ponerle un relleno */
+
+h1{
+    background: red;
+    color: white;
+    padding: 10px;
+}
+
+a{
+    font-size: 18px;
+    color: green;
+    text-decoration: none;
+
+}
+
+
+footer a{
+    color: red;
+}
+
+
+
+
+
+/* equi como en el ejemplo de footer a seleccionamoe la etiqueta footer y dentro de la etiqueta footer seleccionamos el anchor tag  */
+
+/* Selector de id */
+/* Dentro del html tenemos identificadores que nos permiten seleccionar elementos especficos usamos el simbolo de hash y el nombre del identificador para selecccionarlo  */
+
+/* Los id son unicos no pueden repetirse porque los id estan hechos para identificar a un unico elemento  */
+
+
+#descripcion, #titulo{
+    border: 1px solid black;
+    padding: 15px;
+}
+
+#titulo{
+    background: blue;
+    border: 2px dashed white;
+}
+
+/*  Las hojas se leen de arriba a abajo el ultimo estilo que este puesto es el que predomina, sobre el anterior */
+
+/* para compartir estilos lo que podemos hacer es poner una coma y agrergamos otro id, podemos hacer muchos id con el mismo estilo por ejemplo si queremos que los id #descripcion y #titulo tengan el mismo aspecto podemos seleccionarlos separandolos con una coma como en el ejemplo de arriba */
+
+
+/* Selector de clase */
+/* los selectores de clase nos permiten darle formato a muchos elementos por ejemplo si a los parrafos les ponemos una classe parrafo */
+
+.parrafo{
+    font-style: italic;
+    /* text-decoration: underline; */
+    font-weight: bold;
+}
+
+/* podemos usar diferentes tipos de clases  */
+
+
+.parrafo1, .parrafo3{
+    background: green;
+    color: white;
+    padding: 10px;
+}
+
+.parrafo3{
+    background-color: orange;
+    color: black;
+}
+
+
+/* podemos usar varias clases dentro del attiburo class */
+
+
+
+/* Selector de atributo */
+/* Selectores de attibuto nos permite seleccionar elementos del html en base a ciertos elementos generalmente se utilizan con formularios */
+
+#usuario form{
+    border: 5px solid blue;
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+
+
+/* aqui seleccionamos el id de usuario y la form dentro del id y le ponemos un border y margenes arriba o abajo */
+
+/* Hacemos otra regla nueva, y queremos que cada uno de los elementos esten en una sola linea entonces usamos el selector universal y usamos display que nos permite que los elementos se comporten como un bloque o como elementos de linea con block hacemos que cada elemento este en una sola linea */
+
+#usuario form * {
+    display: block ;
+}
+
+/* Despues quiero darle estilos a los inputs entonces seleccionamos su atributo los impuit tienen diferentes tipos de atributos los elementos de html tamvbien tienen ciertos tipos de atributos, por ejemplo los imput tienen muchos tipos de atributos, atributos tales como button, checkbox, color, date, datetime-local, email, file, hidden, image, month, number, password, radio, range, reset, search, submit, tel, text, time, url, o week */
+
+input[type="text"]{
+    margin-bottom: 15px;
+    padding: 10px;
+    width: 200px;
+}
+
+
+/* en este caso tomamos a la etiqueta input y por su atributo submit le damos color de fondo verde, color de letra blanco, un relleno de 15 pixeles, tamano de la letra de 15px usando text transforma para ponerlo todo a mayuscula, un borde negro, y el cursor pointer, esto nos permite saber que podemos dar clieck cuando hacemos hover por encima del elemento  */
+
+
+
+input[type="submit"]{
+    background: green;
+    color: white;
+    padding: 15px;
+    font-size: 15px;
+    text-transform: uppercase;
+    border:1px solid black;
+    cursor: pointer;
+}
+
+
+/* Fuente: https://www.w3schools.com/tags/tag_input.asp */
+
+
+
+/* Selectores Hijos */
+
+/* ejemplo si tenemos una ul o una lista sin orden y queremos darle unos subelmentos de lista a uno de los elementos en la lista sin ordern
+
+<ul>
+       <li><a href="#">Inicio</a></li>
+       <li><a href="#">Temario</a> 
+            <ul>
+                <li><a href="#">HTML</a></li>
+                <li><a href="#">CSS</a></li>
+                <li><a href="#">LESS</a></li>
+            </ul>
+        </li>
+       <li><a href="#">Resenas</a></li>
+       <li><a href="#">contacta</a></li>
+    </ul> 
+
+
+entonces lo que podemos hacer es darle estiles a los li que hay en el menu ponemos un id a la primera lista o a la lista parent 
+    */
+
+
+    /* para ponerle color rojo a los primeros elementos lo que hacemos es seleccionar los elementos que querramos entonces aplicamos a los elementos hijos, los selectores hijos son solo los que estan direcramente abajo de otro elemento por ejemlo los anchos que estan justo por debajo del elemento li */
+#menu > li > a{
+    font-size: 18px;
+    color: red;
+    text-decoration: none;
+}
+
+
+/* Prioridad */
+
+/* La prioridad dentro de css lo quye hace es darle mas priridad a los que estan mas abajo, pero entre mas especifica una regla es mas prioritario, con la misma especificidad se toma mas prioritario el que este abajo, entre mas especifico es tiene mas prioridad, ahora tenemos algo que se denomina !important que lo vuelve mucho mas especifico que todo lo demas
+cuanto mas especifico sea el selector mas prioridad tendra 
+ */
+
+
+ #saludo h1{
+    background: brown !important;
+ }
+
+ h1{
+     background: purple !important;
+ }
+
+
+ 

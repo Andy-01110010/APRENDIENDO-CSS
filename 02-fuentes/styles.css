@@ -1,0 +1,62 @@
+@font-face{
+    font-family: RobotoMono;
+    src: url(fonts/RobotoMono-VariableFont_wght.ttf)
+}
+
+/* font face es una forma que nos permite personalizar los nomrbes de nuestras fuentes para trabajar con ellas de manera mas intuitiva, y segundo podmeos trabajar sin tener que importarlas de internet o de google fonts, podemos trabajar con ellas de manera local entonces es muy bueno */
+
+h1{
+    /* font-family: monospace; */
+    font-family: 'Press Start 2P', cursive;
+    font-style: normal;
+
+    /* Colores */
+
+    /* Colores del Sistema */
+    /* Son los colores que ya vienen con un alias son los que vienen por default en el sistema  */
+    /* Fuente: https://www.w3schools.com/cssref/css_colors.asp */
+    color: mediumpurple; 
+
+    /* Colores hexadecimales */
+    /*  */
+    color: #AAA;
+
+    /* Colores RGB */
+    /* Red Green and Blue, rojo verde y azul, los colores los podemos generar con la paleta del vscode pero tambien hay paginas como css3maker y nos da colores en diferentes formatos */
+    color: rgb(255, 0, 183);
+    
+    /* Colores RGBA */
+    /* los colores rgba son basicamente lo mismo que los rgb con la diferencia de que los rgba pueden tener transparencia  */
+
+
+}
+
+/* con font family podemos seleccionar diferentes tipos de fuentes,  */
+
+
+
+h3{
+    font-family: RobotoMono, "comic Sans MS";
+    font-size: 25px;
+    font-weight: lighter;
+}
+
+
+/* Hay que recordar que un em son 16px */
+
+p{
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size: 18px;
+    font-weight: bold;
+    
+}
+
+/* font size nos permite dar el tamano a la letra, el font weight nos permite poner en negrita o mas negrita, o mas delgadas font style nos permite usar poner en italica o medio inclinada o normal */
+
+
+/* Importacion de fuentes o fuentes personalizadas*/
+/* en google fonts podemos importar algunas fuentes  */
+
+
+
+/* colore */
